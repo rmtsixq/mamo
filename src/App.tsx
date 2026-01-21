@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Text, Stars } from '@react-three/drei';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 
 // 500 küre için rastgele pozisyonlar ve numaralar üreten fonksiyon
@@ -66,6 +67,7 @@ function App() {
           <b>Gösterilen küre:</b> {filtered.length}
         </div>
       </div>
+      <Analytics />
     </div>
   );
 }
